@@ -1,0 +1,24 @@
+<h1>Current Weather for {{ city }}</h1>
+
+<div>
+  <div class="row">
+    <div class="col-md-12">
+      <img src="https://openweathermap.org/img/wn/{{weatherResult.weather[0].icon}}@2x.png ">
+      {{weatherResult.weather[0].description}}
+    </div>
+    <div class="col-md-12">
+      <h2>5-Day Forecast (Every 3 Hours)</h2>
+      <div ng-repeat="result in weatherForecastResult.list">
+        <div class="panel panel-default">
+          <div class="panel panel-heading">
+            {{result.dt_txt}}
+          </div>
+          <div class="panel-body">
+          High: {{result.main.temp_max}}
+          Low: {{result.main.temp_min}}
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>
