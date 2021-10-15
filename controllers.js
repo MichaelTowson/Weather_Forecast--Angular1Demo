@@ -27,7 +27,7 @@ weatherApp.controller("weatherController", [
       { get: { method: "JSONP" } }
     );
     $scope.weatherResult = $scope.currentWeatherAPI.get();
-    console.log($scope.weatherResult);
+    console.log($scope.weatherResult[0]);
 
     //Get weather forecast
     $scope.weatherForecastAPI = $resource(
