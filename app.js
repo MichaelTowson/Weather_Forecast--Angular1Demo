@@ -66,7 +66,17 @@ weatherApp.controller("weatherController", ["$scope", '$resource', 'cityService'
 
   //Convert to Date
   $scope.convertToDate = function(dt) {
+    console.log("Converting date")
     return new Date(dt * 1000);
   }
 }
 ]);
+
+//DIRECTIVES
+weatherApp.directive("forecastResult", function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'directives/forecastResult.html',
+    replace: true,
+  }
+})

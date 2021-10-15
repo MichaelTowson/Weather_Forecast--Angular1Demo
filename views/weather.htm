@@ -9,14 +9,9 @@
     <div class="col-md-12">
       <h2>5-Day Forecast (Every 3 Hours From Now)</h2>
       <div ng-repeat="result in weatherForecastResult.list">
-        <div class="panel panel-default">
-          <div class="panel panel-heading">
-            {{convertToDate(result.dt) | date: 'EEEE, MMM d, y, h:mm a'}}
-          </div>
-          <div class="panel-body">
-          <img src="https://openweathermap.org/img/wn/{{result.weather[0].icon}}@2x.png ">
-          High: {{convertToFahrenheit(result.main.temp_max)}}&#176 
-          Low: {{convertToFahrenheit(result.main.temp_min)}}&#176 (F)
+        <div class="row">
+          <div class="col-md-12">
+            <forecast-result/>
           </div>
         </div>
     </div>
