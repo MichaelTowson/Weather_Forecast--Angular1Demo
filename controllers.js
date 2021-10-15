@@ -1,4 +1,3 @@
-//CONTROLLERS
 weatherApp.controller("homeController", [
   "$scope",
   "cityService",
