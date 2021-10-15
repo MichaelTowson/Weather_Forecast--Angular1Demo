@@ -1,4 +1,5 @@
-<div ng-if="weatherResult"}>
+<!-- Note: Need to research how to get a level deeper in weatherResult to check if there is a list. -->
+<div ng-if="weatherResult">
   <div class="background"></div>
   <div class="row transparent-panel">
     <h1>Current Weather for {{ city }}</h1>
@@ -20,10 +21,10 @@
 </div>
 
 <!-- Load this if no search results. -->
-<div ng-if=>
+<div ng-if="!weatherResult">
   <div class="background"></div>
   <div class="row transparent-panel">
-    <h3>Search did not return any results. No city was identified with that name. Please try again.</h3>
+    <h3>No valid city entered. Please start a new search</h3>
     <a class="btn btn-primary" href="#">Make a new search</a>
   </div>
 </div>
