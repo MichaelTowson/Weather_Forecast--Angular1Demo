@@ -1,0 +1,32 @@
+html, body, input, select, textarea {
+  font-size: 1.05em !important;
+}
+
+.disclaimer {
+  margin-top: 3rem; 
+  font-size: .8rem
+}
+
+.nav-icon {
+  border-radius: 100%;
+  width: 3rem;
+}
+
+.background {
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-image: url('images/background.jpg');
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  z-index: -1;
+}
+
+.transparent-panel {
+  padding: 4rem;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 2rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .40);
+  z-index:1;
+}

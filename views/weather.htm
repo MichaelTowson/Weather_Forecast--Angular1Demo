@@ -1,18 +1,29 @@
-<div class="row">
-  <h1>Current Weather for {{ city }}</h1>
-  <a class="btn btn-primary" href="#">Make a new search</a>
-  <div class="col-md-12">
-    <img src="https://openweathermap.org/img/wn/{{weatherResult.weather[0].icon}}@2x.png ">
-    <p class="text-capitalize">{{weatherResult.weather[0].description}}</p>
-  </div>
-  <div class="col-md-12">
-    <h2>5-Day Forecast (Every 3 Hours From Now)</h2>
-    <div ng-repeat="result in weatherForecastResult.list">
-      <div class="row">
-        <div class="col-md-12">
-          <forecast-result/>
+<div ng-if="weatherResult"}>
+  <div class="background"></div>
+  <div class="row transparent-panel">
+    <h1>Current Weather for {{ city }}</h1>
+    <a class="btn btn-primary" href="#">Make a new search</a>
+    <div class="col-md-12">
+      <img src="https://openweathermap.org/img/wn/{{weatherResult.weather[0].icon}}@2x.png ">
+      <p class="text-capitalize">{{weatherResult.weather[0].description}}</p>
+    </div>
+    <div class="col-md-12">
+      <h2>5-Day Forecast (Every 3 Hours From Now)</h2>
+      <div ng-repeat="result in weatherForecastResult.list">
+        <div class="row">
+          <div class="col-md-12">
+            <forecast-result/>
+          </div>
         </div>
-      </div>
+    </div>
   </div>
+</div>
 
+<!-- Load this if no search results. -->
+<div ng-if=>
+  <div class="background"></div>
+  <div class="row transparent-panel">
+    <h3>Search did not return any results. No city was identified with that name. Please try again.</h3>
+    <a class="btn btn-primary" href="#">Make a new search</a>
+  </div>
 </div>

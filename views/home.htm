@@ -1,13 +1,17 @@
-<div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <h1 class="h3 text-center">Get Current Weather and Forecast by City</h1>
-      <div class="form-group">
-        <input type="text" ng-model="city" class="form-control" />
+<div class="background"></div>
+  <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="transparent-panel">
+          <h1 class="h3 text-center">Get Current Weather/Forecast</h1>
+          <div class="form-group">
+            <input type="text" ng-model="city" class="form-control" />
+          </div>
+          <a href="#/weather" class="btn btn-primary">Search</a>
+          <p class="disclaimer">*This is a simple demo of a single page application utilizing an API and displaying
+            information using Angular 1. Much of its foundation is based on a tutorial by Anthony Alicea as part of his Udemy
+            <span><a href="https://www.udemy.com/course/learn-angularjs/">course</a></span> on Angular 1, although I modifed the
+            project and added some of my own features and styling</p>
+        </div>
       </div>
-      <a href="#/weather" class="btn btn-primary">Search</a>
-      <p style="margin-top: 3rem; font-size: .8rem">*This is a simple, lightly-styled demo of a single page application utilizing an API and displaying
-        information using Angular 1. Much of its foundation is based on a tutorial by Anthony Alicea as part of his Udemy
-        <span><a href="https://www.udemy.com/course/learn-angularjs/">course</a></span> on Angular 1, although I modifed the
-        project and added some of my own features</p>
-    </div>
-</div>
+  </div>
+
