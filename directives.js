@@ -1,4 +1,3 @@
-//DIRECTIVES
 weatherApp.directive("forecastResult", function () {
   return {
     restrict: "E",
